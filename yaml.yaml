@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  sling-sync-job1:
+    build: .
+    container_name: sling-sync-job1
+    restart: unless-stopped
+    volumes:
+      - ./data/job1:/app
+    environment:
+      - SLING_AUTH_TOKEN=your_auth_token_here
+      - SLING_USER_ID=your_user_id_here
+      - SLING_ORG_ID=your_org_id_here
+      - CALENDAR_ID=primary
+      - CHECK_INTERVAL_MINUTES=60
+      - EVENT_TITLE_PREFIX=My Job Title
+      - EVENT_COLOR_ID=9 # 9 = Blue, 10 = Green, 11 = Red
+      - EVENT_ID_PREFIX=job1 # Unique prefix (letters/numbers only)

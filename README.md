@@ -1,1 +1,0 @@
-# Sling-to-Google-Calendar-Multi-Container-Synchronization-Guide-Codebase
